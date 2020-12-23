@@ -3,15 +3,12 @@ package main
 import (
 	"fmt"
 	"github.com/confluentinc/confluent-kafka-go/kafka"
-	"os"
-	"os/signal"
-	"syscall"
 )
 
-func doConsume(broker string, group string, topics []string) (err error) {
+func doConsume(broker string, group string, topics []string) chan bool {
 
-	sigchan := make(chan os.Signal, 1)
-	signal.Notify(sigchan, syscall.SIGINT, syscall.SIGTERM)
+	done := make(chan bool)
+	//var message string
 
 	cm := kafka.ConfigMap{
 		"bootstrap.servers":    broker,
@@ -27,30 +24,30 @@ func doConsume(broker string, group string, topics []string) (err error) {
 		if ke, ok := err.(kafka.Error); ok == true {
 			switch ec := ke.Code(); ec {
 			case kafka.ErrInvalidArg:
-				return fmt.Errorf("Can't create consumer because wrong configuration (code: %d)!\n\t%v\n\nTo see the configuration options, refer to https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md\n", ec, err)
+				fmt.Printf("Can't create consumer because wrong configuration (code: %d)!\n\t%v\n\nTo see the configuration options, refer to https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md\n", ec, err)
 			default:
-				return fmt.Errorf("Can't create consumer (code: %d)!\n\t%v\n", ec, err)
+				fmt.Printf("Can't create consumer (code: %d)!\n\t%v\n", ec, err)
 			}
 		} else {
 			// Not Kafka Error occurs
-			return fmt.Errorf("Can't create consumer because generic error! \n\t%v\n", err)
+			fmt.Printf("Can't create consumer because generic error! \n\t%v\n", err)
 		}
 	} else {
 
 		// subscribe to the topic
 		if err := c.SubscribeTopics(topics, nil); err != nil {
-			return fmt.Errorf("There's an Error subscribing to the topic:\n\t%v\n", err)
+			fmt.Printf("There's an Error subscribing to the topic:\n\t%v\n", err)
 		}
 
 		doTerm := false
 
 		for !doTerm {
 			select {
-			case sig := <-sigchan:
+			case sig := <-done:
 				fmt.Printf("Caught signal %v: terminating\n", sig)
 				doTerm = true
 			default:
-				ev := c.Poll(1000)
+				ev := c.Poll(0)
 				if ev == nil {
 					continue
 				}
@@ -65,6 +62,7 @@ func doConsume(broker string, group string, topics []string) (err error) {
 						*km.TopicPartition.Topic,
 						km.TopicPartition.Partition,
 						km.TopicPartition.Offset)
+					//message = string(km.Value)
 					if km.Headers != nil {
 						fmt.Printf("Headers: %v\n", km.Headers)
 					}
@@ -82,7 +80,7 @@ func doConsume(broker string, group string, topics []string) (err error) {
 				case kafka.Error:
 					// It's an error
 					em := ev.(kafka.Error)
-					return fmt.Errorf("☠️ Uh oh, caught an error:\n\t%v\n", em)
+					fmt.Printf("☠️ Uh oh, caught an error:\n\t%v\n", em)
 
 				default:
 					// It's not anything we were expecting
@@ -93,5 +91,6 @@ func doConsume(broker string, group string, topics []string) (err error) {
 		}
 		c.Close()
 	}
-	return nil
+
+	return done
 }

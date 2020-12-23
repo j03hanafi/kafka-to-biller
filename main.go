@@ -1,27 +1,21 @@
 package main
 
 import (
-	"fmt"
-	"os"
+	"log"
+	"net/http"
 )
 
 func main() {
 
-	if len(os.Args) < 4 {
-		fmt.Fprintf(os.Stderr, "Usage: %s <broker> <group> <topics..>\n",
-			os.Args[0])
-		os.Exit(1)
+	topics := []string{topic1, topic2}
+	done := doConsume(broker, group, topics)
+
+	router := server()
+	serverErr := http.ListenAndServe(":6020", router)
+	done <- true
+
+	if serverErr != nil {
+		log.Fatal(serverErr)
 	}
 
-	broker := os.Args[1]
-	group := os.Args[2]
-	topics := os.Args[3:]
-
-	err := doConsume(broker, group, topics)
-	if err != nil {
-		os.Exit(1)
-	}
-
-	//	nethttp
-	//  httplistenandserve
 }
