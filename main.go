@@ -7,8 +7,7 @@ import (
 
 func main() {
 
-	topics := []string{topic1, topic2}
-	done := doConsume(broker, group, topics)
+	done := doConsume(broker, group)
 
 	router := server()
 	serverErr := http.ListenAndServe(":6020", router)

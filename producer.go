@@ -6,7 +6,9 @@ import (
 	"github.com/confluentinc/confluent-kafka-go/kafka"
 )
 
-func doProducer(broker string, topic string, iso string) (msg string, err error) {
+func doProducer(broker string, topic string, iso string) (err error) {
+
+	fmt.Printf("Starting producer\n")
 
 	cm := kafka.ConfigMap{
 		"bootstrap.servers": broker,
@@ -16,13 +18,13 @@ func doProducer(broker string, topic string, iso string) (msg string, err error)
 		if ke, ok := err.(kafka.Error); ok == true {
 			switch ec := ke.Code(); ec {
 			case kafka.ErrInvalidArg:
-				return "", fmt.Errorf("Can't create producer because wrong configuration (code: %d)!\n\t%v\n\nTo see the configuration options, refer to https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md\n", ec, err)
+				return fmt.Errorf("Can't create producer because wrong configuration (code: %d)!\n\t%v\n\nTo see the configuration options, refer to https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md\n", ec, err)
 			default:
-				return "", fmt.Errorf("Can't create producer (code: %d)!\n\t%v\n", ec, err)
+				return fmt.Errorf("Can't create producer (code: %d)!\n\t%v\n", ec, err)
 			}
 		} else {
 			// Not Kafka Error occurs
-			return "", fmt.Errorf("Can't create producer because generic error! \n\t%v\n", err)
+			return fmt.Errorf("Can't create producer because generic error! \n\t%v\n", err)
 		}
 	} else {
 
@@ -53,17 +55,16 @@ func doProducer(broker string, topic string, iso string) (msg string, err error)
 						// delivery report
 						km := ev.(*kafka.Message)
 						if km.TopicPartition.Error != nil {
-							errorChan <- fmt.Sprintf("Failed to send message '%v' to topic '%v'\n\tError: %v\n",
+							errorChan <- fmt.Sprintf("Failed to send message '%v' \n\tto topic '%v'\n\tError: %v\n",
 								string(km.Value),
 								*km.TopicPartition.Topic,
 								km.TopicPartition.Error)
 						} else {
-							fmt.Printf("Message '%v' delivered to topic '%v' (partition %d at offset %d)\n",
+							fmt.Printf("Message '%v' \n\tdelivered to topic '%v' (partition %d at offset %d)\n",
 								string(km.Value),
 								*km.TopicPartition.Topic,
 								km.TopicPartition.Partition,
 								km.TopicPartition.Offset)
-							msg = string(km.Value)
 						}
 
 					case kafka.Error:
@@ -117,14 +118,13 @@ func doProducer(broker string, topic string, iso string) (msg string, err error)
 		if len(err) > 0 {
 			// if error not nil
 			fmt.Printf("returning an error\n")
-			return "", errors.New(err)
+			return errors.New(err)
 		}
-
-		defer p.Close()
+		fmt.Printf("Closing producer...\n")
+		p.Close()
 
 	}
 
-	fmt.Printf("finishing...\n")
-	return msg, nil
+	return nil
 
 }
