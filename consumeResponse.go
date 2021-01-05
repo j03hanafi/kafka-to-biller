@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 	"github.com/confluentinc/confluent-kafka-go/kafka"
+	"log"
 )
 
 func consumeResponse(broker string, group string, topics []string) (string, error) {
 
 	var response string
 
-	fmt.Printf("Starting consumer\n")
+	log.Printf("Starting consumer\n")
 
 	cm := kafka.ConfigMap{
 		"bootstrap.servers":    broker,
@@ -53,19 +54,19 @@ func consumeResponse(broker string, group string, topics []string) (string, erro
 					case *kafka.Message:
 						// It's a message
 						km := ev.(*kafka.Message)
-						fmt.Printf("Message '%v' received from topic '%v' (partition %d at offset %d)\n",
+						log.Printf("Message '%v' received from topic '%v' (partition %d at offset %d)\n",
 							string(km.Value),
 							*km.TopicPartition.Topic,
 							km.TopicPartition.Partition,
 							km.TopicPartition.Offset)
 						if km.Headers != nil {
-							fmt.Printf("Headers: %v\n", km.Headers)
+							log.Printf("Headers: %v\n", km.Headers)
 						}
 						response = string(km.Value)
 
 					case kafka.PartitionEOF:
 						pe := ev.(kafka.PartitionEOF)
-						fmt.Printf("Got to the end of partition %v on topic %v at offset %v\n",
+						log.Printf("Got to the end of partition %v on topic %v at offset %v\n",
 							pe.Partition,
 							*pe.Topic,
 							pe.Offset)
@@ -81,14 +82,14 @@ func consumeResponse(broker string, group string, topics []string) (string, erro
 
 					default:
 						// It's not anything we were expecting
-						fmt.Printf("Got an event that's not a Message, Error, or PartitionEOF\n\t%v\n", ev)
+						log.Printf("Got an event that's not a Message, Error, or PartitionEOF\n\t%v\n", ev)
 
 					}
 
 				}
 			}
 
-			fmt.Printf("Closing consumer...\n")
+			log.Printf("Closing consumer...\n")
 			c.Close()
 
 		}

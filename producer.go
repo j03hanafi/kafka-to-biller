@@ -4,11 +4,12 @@ import (
 	"errors"
 	"fmt"
 	"github.com/confluentinc/confluent-kafka-go/kafka"
+	"log"
 )
 
 func doProducer(broker string, topic string, iso string) (err error) {
 
-	fmt.Printf("Starting producer\n")
+	log.Printf("Starting producer\n")
 
 	cm := kafka.ConfigMap{
 		"bootstrap.servers": broker,
@@ -60,7 +61,7 @@ func doProducer(broker string, topic string, iso string) (err error) {
 								*km.TopicPartition.Topic,
 								km.TopicPartition.Error)
 						} else {
-							fmt.Printf("Message '%v' \n\tdelivered to topic '%v' (partition %d at offset %d)\n",
+							log.Printf("Message '%v' \n\tdelivered to topic '%v' (partition %d at offset %d)\n",
 								string(km.Value),
 								*km.TopicPartition.Topic,
 								km.TopicPartition.Partition,
@@ -96,7 +97,7 @@ func doProducer(broker string, topic string, iso string) (err error) {
 		if r := p.Flush(t); r > 0 {
 			errorChan <- fmt.Sprintf("Failed to flush all messages after %d seconds. %d message(s) remain\n", t, r)
 		} else {
-			fmt.Printf("All messages flused from queue\n")
+			log.Printf("All messages flused from queue\n")
 		}
 
 		// signal termination to go-routine
@@ -117,10 +118,10 @@ func doProducer(broker string, topic string, iso string) (err error) {
 
 		if len(err) > 0 {
 			// if error not nil
-			fmt.Printf("returning an error\n")
+			log.Printf("returning an error\n")
 			return errors.New(err)
 		}
-		fmt.Printf("Closing producer...\n")
+		log.Printf("Closing producer...\n")
 		p.Close()
 
 	}
