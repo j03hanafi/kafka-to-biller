@@ -134,7 +134,7 @@ func responseJson(jsonIso Transaction) Transaction {
 		log.Fatalf("Preparing body request failed. Error: %v\n", err)
 	}
 
-	timeout := time.Duration(5 * time.Second)
+	timeout := 5 * time.Second
 	client := http.Client{
 		Timeout: timeout,
 	}
