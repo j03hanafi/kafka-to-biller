@@ -134,10 +134,8 @@ func responseJson(jsonIso Transaction) Transaction {
 		log.Fatalf("Preparing body request failed. Error: %v\n", err)
 	}
 
-	timeout := 5 * time.Second
-	client := http.Client{
-		Timeout: timeout,
-	}
+	//timeout := 5 * time.Second
+	client := http.Client{}
 
 	log.Printf("Request to https://tiruan.herokuapp.com/biller\n")
 

@@ -538,3 +538,1362 @@ Response:
 2021/01/05 16:52:36 Got to the end of partition 0 on topic channel-kafka at offset 22
 2021/01/05 16:52:38 Got to the end of partition 0 on topic channel-kafka at offset 22
 2021/01/05 16:52:41 Got to the end of partition 0 on topic channel-kafka at offset 22
+2021/01/11 16:49:31 Starting producer
+2021/01/11 16:49:31 Starting consumer
+2021/01/11 16:49:31 ☠️ Uh oh, caught an error:
+	localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Connection refused (after 0ms in state CONNECT)
+2021/01/11 16:49:31 ☠️ Uh oh, caught an error:
+	1/1 brokers are down
+2021/01/11 16:49:32 ☠️ Uh oh, caught an error:
+	localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+2021/01/11 16:52:53 Starting producer
+2021/01/11 16:52:53 Starting consumer
+2021/01/11 16:52:53 Got to the end of partition 0 on topic channel-kafka at offset 28
+2021/01/11 16:53:03 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 28)
+2021/01/11 16:53:03 Headers: [testHeader="headers value are binary"]
+2021/01/11 16:53:03 Create file from request on topic channel-kafka
+2021/01/11 16:53:03 File created:  storage/request/Request_from_channel-kafka@2021-01-11 16:53:03.txt
+2021/01/11 16:53:03 Converting ISO8583 to JSON
+2021/01/11 16:53:03 Convert success
+2021/01/11 16:53:03 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 16:53:08 Failed to get response from https://tiruan.herokuapp.com/biller. Error: Get "https://tiruan.herokuapp.com/biller": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2021/01/11 16:54:53 Starting producer
+2021/01/11 16:54:53 Starting consumer
+2021/01/11 16:54:53 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 29)
+2021/01/11 16:54:53 Headers: [testHeader="headers value are binary"]
+2021/01/11 16:54:53 Create file from request on topic channel-kafka
+2021/01/11 16:54:53 File created:  storage/request/Request_from_channel-kafka@2021-01-11 16:54:53.txt
+2021/01/11 16:54:53 Converting ISO8583 to JSON
+2021/01/11 16:54:53 Convert success
+2021/01/11 16:54:53 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 16:54:55 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 16:54:55 Converting JSON to ISO8583
+2021/01/11 16:54:55 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 16:54:55 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 16:54:55 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 16:54:55 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 16:54:55 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 16:54:55 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 16:54:55 Field[50]: 702 (Currency code, settlement)
+2021/01/11 16:54:55 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 16:54:55 Field[11]: 554461 (System trace audit number)
+2021/01/11 16:54:55 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 16:54:55 Field[22]: 011 (Point of service entry mode)
+2021/01/11 16:54:55 Field[49]: 360 (Currency code, transaction)
+2021/01/11 16:54:55 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 16:54:55 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 16:54:55 Field[18]: 7011 (Merchant type)
+2021/01/11 16:54:55 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 16:54:55 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 16:54:55 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 16:54:55 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 16:54:55 Field[3]: 263000 (Processing code)
+2021/01/11 16:54:55 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 16:54:55 Field[17]: 0921 (Date, capture)
+2021/01/11 16:54:55 Convert Success
+2021/01/11 16:54:55 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 16:54:55 File created:  storage/response/Response_to_263000@2021-01-11 16:54:55.txt
+2021/01/11 16:54:55 Starting producer
+2021/01/11 16:54:55 All messages flused from queue
+2021/01/11 16:54:55 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 27)
+2021/01/11 16:54:55 Closing producer...
+2021/01/11 16:54:55 Got to the end of partition 0 on topic channel-kafka at offset 30
+2021/01/11 16:55:16 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 30)
+2021/01/11 16:55:16 Headers: [testHeader="headers value are binary"]
+2021/01/11 16:55:16 Create file from request on topic channel-kafka
+2021/01/11 16:55:16 File created:  storage/request/Request_from_channel-kafka@2021-01-11 16:55:16.txt
+2021/01/11 16:55:16 Converting ISO8583 to JSON
+2021/01/11 16:55:16 Convert success
+2021/01/11 16:55:16 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 16:55:17 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 16:55:17 Converting JSON to ISO8583
+2021/01/11 16:55:17 Field[11]: 554461 (System trace audit number)
+2021/01/11 16:55:17 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 16:55:17 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 16:55:17 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 16:55:17 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 16:55:17 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 16:55:17 Field[17]: 0921 (Date, capture)
+2021/01/11 16:55:17 Field[22]: 011 (Point of service entry mode)
+2021/01/11 16:55:17 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 16:55:17 Field[49]: 360 (Currency code, transaction)
+2021/01/11 16:55:17 Field[50]: 702 (Currency code, settlement)
+2021/01/11 16:55:17 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 16:55:17 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 16:55:17 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 16:55:17 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 16:55:17 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 16:55:17 Field[18]: 7011 (Merchant type)
+2021/01/11 16:55:17 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 16:55:17 Field[3]: 263000 (Processing code)
+2021/01/11 16:55:17 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 16:55:17 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 16:55:17 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 16:55:17 Convert Success
+2021/01/11 16:55:17 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 16:55:17 File created:  storage/response/Response_to_263000@2021-01-11 16:55:17.txt
+2021/01/11 16:55:17 Starting producer
+2021/01/11 16:55:17 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 28)
+2021/01/11 16:55:17 All messages flused from queue
+2021/01/11 16:55:17 Closing producer...
+2021/01/11 16:55:18 Got to the end of partition 0 on topic channel-kafka at offset 31
+2021/01/11 16:55:20 Got to the end of partition 0 on topic channel-kafka at offset 31
+2021/01/11 16:57:38 Starting producer
+2021/01/11 16:57:38 Starting consumer
+2021/01/11 16:57:48 ☠️ Uh oh, caught an error:
+	188.166.255.175:9092/bootstrap: ApiVersionRequest failed: Local: Timed out: probably due to broker version < 0.10 (see api.version.request configuration) (after 10011ms in state APIVERSION_QUERY)
+2021/01/11 16:57:48 ☠️ Uh oh, caught an error:
+	1/1 brokers are down
+2021/01/11 16:57:59 ☠️ Uh oh, caught an error:
+	188.166.255.175:9092/bootstrap: ApiVersionRequest failed: Local: Timed out: probably due to broker version < 0.10 (see api.version.request configuration) (after 10009ms in state APIVERSION_QUERY, 1 identical error(s) suppressed)
+2021/01/11 16:57:59 ☠️ Uh oh, caught an error:
+	1/1 brokers are down
+2021/01/11 16:58:10 ☠️ Uh oh, caught an error:
+	1/1 brokers are down
+2021/01/11 17:46:11 Starting producer
+2021/01/11 17:46:11 Starting consumer
+2021/01/11 17:46:22 ☠️ Uh oh, caught an error:
+	188.166.255.175:29092/bootstrap: ApiVersionRequest failed: Local: Timed out: probably due to broker version < 0.10 (see api.version.request configuration) (after 10009ms in state APIVERSION_QUERY)
+2021/01/11 17:46:22 ☠️ Uh oh, caught an error:
+	1/1 brokers are down
+2021/01/11 17:46:32 ☠️ Uh oh, caught an error:
+	188.166.255.175:29092/bootstrap: ApiVersionRequest failed: Local: Timed out: probably due to broker version < 0.10 (see api.version.request configuration) (after 10010ms in state APIVERSION_QUERY, 1 identical error(s) suppressed)
+2021/01/11 17:46:32 ☠️ Uh oh, caught an error:
+	1/1 brokers are down
+2021/01/11 17:46:44 ☠️ Uh oh, caught an error:
+	1/1 brokers are down
+2021/01/11 17:46:54 ☠️ Uh oh, caught an error:
+	1/1 brokers are down
+2021/01/11 17:55:33 Starting producer
+2021/01/11 17:55:33 Starting consumer
+2021/01/11 17:55:34 ☠️ Uh oh, caught an error:
+	Subscribed topic not available: channel-kafka: Broker: Unknown topic or partition
+2021/01/11 17:55:59 Got to the end of partition 0 on topic channel-kafka at offset 0
+2021/01/11 17:55:59 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 0)
+2021/01/11 17:55:59 Headers: [testHeader="headers value are binary"]
+2021/01/11 17:55:59 Create file from request on topic channel-kafka
+2021/01/11 17:55:59 File created:  storage/request/Request_from_channel-kafka@2021-01-11 17:55:59.txt
+2021/01/11 17:55:59 Converting ISO8583 to JSON
+2021/01/11 17:55:59 Convert success
+2021/01/11 17:55:59 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 17:56:10 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 17:56:10 Converting JSON to ISO8583
+2021/01/11 17:56:10 Field[49]: 360 (Currency code, transaction)
+2021/01/11 17:56:10 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 17:56:10 Field[3]: 263000 (Processing code)
+2021/01/11 17:56:10 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 17:56:10 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 17:56:10 Field[11]: 554461 (System trace audit number)
+2021/01/11 17:56:10 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 17:56:10 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 17:56:10 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 17:56:10 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 17:56:10 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 17:56:10 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 17:56:10 Field[18]: 7011 (Merchant type)
+2021/01/11 17:56:10 Field[50]: 702 (Currency code, settlement)
+2021/01/11 17:56:10 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 17:56:10 Field[17]: 0921 (Date, capture)
+2021/01/11 17:56:10 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 17:56:10 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 17:56:10 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 17:56:10 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 17:56:10 Field[22]: 011 (Point of service entry mode)
+2021/01/11 17:56:10 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 17:56:10 Convert Success
+2021/01/11 17:56:10 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 17:56:10 File created:  storage/response/Response_to_263000@2021-01-11 17:56:10.txt
+2021/01/11 17:56:10 Starting producer
+2021/01/11 17:56:11 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 0)
+2021/01/11 17:56:11 All messages flused from queue
+2021/01/11 17:56:11 Closing producer...
+2021/01/11 17:56:11 Got to the end of partition 0 on topic channel-kafka at offset 1
+2021/01/11 17:56:11 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 1)
+2021/01/11 17:56:11 Headers: [testHeader="headers value are binary"]
+2021/01/11 17:56:11 Create file from request on topic channel-kafka
+2021/01/11 17:56:11 File created:  storage/request/Request_from_channel-kafka@2021-01-11 17:56:11.txt
+2021/01/11 17:56:11 Converting ISO8583 to JSON
+2021/01/11 17:56:11 Convert success
+2021/01/11 17:56:11 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 17:56:12 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 17:56:12 Converting JSON to ISO8583
+2021/01/11 17:56:12 Field[49]: 360 (Currency code, transaction)
+2021/01/11 17:56:12 Field[3]: 263000 (Processing code)
+2021/01/11 17:56:12 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 17:56:12 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 17:56:12 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 17:56:12 Field[17]: 0921 (Date, capture)
+2021/01/11 17:56:12 Field[22]: 011 (Point of service entry mode)
+2021/01/11 17:56:12 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 17:56:12 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 17:56:12 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 17:56:12 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 17:56:12 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 17:56:12 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 17:56:12 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 17:56:12 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 17:56:12 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 17:56:12 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 17:56:12 Field[11]: 554461 (System trace audit number)
+2021/01/11 17:56:12 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 17:56:12 Field[18]: 7011 (Merchant type)
+2021/01/11 17:56:12 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 17:56:12 Field[50]: 702 (Currency code, settlement)
+2021/01/11 17:56:12 Convert Success
+2021/01/11 17:56:12 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 17:56:12 File created:  storage/response/Response_to_263000@2021-01-11 17:56:12.txt
+2021/01/11 17:56:12 Starting producer
+2021/01/11 17:56:12 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 1)
+2021/01/11 17:56:12 All messages flused from queue
+2021/01/11 17:56:12 Closing producer...
+2021/01/11 17:56:12 Got to the end of partition 0 on topic channel-kafka at offset 2
+2021/01/11 17:56:12 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 2)
+2021/01/11 17:56:12 Headers: [testHeader="headers value are binary"]
+2021/01/11 17:56:12 Create file from request on topic channel-kafka
+2021/01/11 17:56:12 File created:  storage/request/Request_from_channel-kafka@2021-01-11 17:56:12.txt
+2021/01/11 17:56:12 Converting ISO8583 to JSON
+2021/01/11 17:56:12 Convert success
+2021/01/11 17:56:12 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 17:56:12 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 17:56:12 Converting JSON to ISO8583
+2021/01/11 17:56:12 Field[49]: 360 (Currency code, transaction)
+2021/01/11 17:56:12 Field[3]: 263000 (Processing code)
+2021/01/11 17:56:12 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 17:56:12 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 17:56:12 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 17:56:12 Field[17]: 0921 (Date, capture)
+2021/01/11 17:56:12 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 17:56:12 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 17:56:12 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 17:56:12 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 17:56:12 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 17:56:12 Field[22]: 011 (Point of service entry mode)
+2021/01/11 17:56:12 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 17:56:12 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 17:56:12 Field[50]: 702 (Currency code, settlement)
+2021/01/11 17:56:12 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 17:56:12 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 17:56:12 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 17:56:12 Field[11]: 554461 (System trace audit number)
+2021/01/11 17:56:12 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 17:56:12 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 17:56:12 Field[18]: 7011 (Merchant type)
+2021/01/11 17:56:12 Convert Success
+2021/01/11 17:56:12 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 17:56:12 File created:  storage/response/Response_to_263000@2021-01-11 17:56:12.txt
+2021/01/11 17:56:12 Starting producer
+2021/01/11 17:56:12 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 2)
+2021/01/11 17:56:13 All messages flused from queue
+2021/01/11 17:56:13 Closing producer...
+2021/01/11 17:56:13 Got to the end of partition 0 on topic channel-kafka at offset 3
+2021/01/11 17:56:14 Got to the end of partition 0 on topic channel-kafka at offset 3
+2021/01/11 17:57:23 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 3)
+2021/01/11 17:57:23 Headers: [testHeader="headers value are binary"]
+2021/01/11 17:57:23 Create file from request on topic channel-kafka
+2021/01/11 17:57:23 File created:  storage/request/Request_from_channel-kafka@2021-01-11 17:57:23.txt
+2021/01/11 17:57:23 Converting ISO8583 to JSON
+2021/01/11 17:57:23 Convert success
+2021/01/11 17:57:23 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 17:57:25 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 17:57:25 Converting JSON to ISO8583
+2021/01/11 17:57:25 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 17:57:25 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 17:57:25 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 17:57:25 Field[17]: 0921 (Date, capture)
+2021/01/11 17:57:25 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 17:57:25 Field[50]: 702 (Currency code, settlement)
+2021/01/11 17:57:25 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 17:57:25 Field[11]: 554461 (System trace audit number)
+2021/01/11 17:57:25 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 17:57:25 Field[18]: 7011 (Merchant type)
+2021/01/11 17:57:25 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 17:57:25 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 17:57:25 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 17:57:25 Field[49]: 360 (Currency code, transaction)
+2021/01/11 17:57:25 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 17:57:25 Field[3]: 263000 (Processing code)
+2021/01/11 17:57:25 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 17:57:25 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 17:57:25 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 17:57:25 Field[22]: 011 (Point of service entry mode)
+2021/01/11 17:57:25 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 17:57:25 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 17:57:25 Convert Success
+2021/01/11 17:57:25 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 17:57:25 File created:  storage/response/Response_to_263000@2021-01-11 17:57:25.txt
+2021/01/11 17:57:25 Starting producer
+2021/01/11 17:57:25 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 3)
+2021/01/11 17:57:25 All messages flused from queue
+2021/01/11 17:57:25 Closing producer...
+2021/01/11 17:57:25 Got to the end of partition 0 on topic channel-kafka at offset 4
+2021/01/11 17:59:25 Starting producer
+2021/01/11 17:59:25 Starting consumer
+2021/01/11 17:59:37 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 4)
+2021/01/11 17:59:37 Headers: [testHeader="headers value are binary"]
+2021/01/11 17:59:37 Create file from request on topic channel-kafka
+2021/01/11 17:59:37 File created:  storage/request/Request_from_channel-kafka@2021-01-11 17:59:37.txt
+2021/01/11 17:59:37 Converting ISO8583 to JSON
+2021/01/11 17:59:37 Convert success
+2021/01/11 17:59:37 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 17:59:39 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 17:59:39 Converting JSON to ISO8583
+2021/01/11 17:59:39 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 17:59:39 Field[17]: 0921 (Date, capture)
+2021/01/11 17:59:39 Field[18]: 7011 (Merchant type)
+2021/01/11 17:59:39 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 17:59:39 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 17:59:39 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 17:59:39 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 17:59:39 Field[50]: 702 (Currency code, settlement)
+2021/01/11 17:59:39 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 17:59:39 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 17:59:39 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 17:59:39 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 17:59:39 Field[49]: 360 (Currency code, transaction)
+2021/01/11 17:59:39 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 17:59:39 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 17:59:39 Field[11]: 554461 (System trace audit number)
+2021/01/11 17:59:39 Field[22]: 011 (Point of service entry mode)
+2021/01/11 17:59:39 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 17:59:39 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 17:59:39 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 17:59:39 Field[3]: 263000 (Processing code)
+2021/01/11 17:59:39 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 17:59:39 Convert Success
+2021/01/11 17:59:39 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 17:59:39 File created:  storage/response/Response_to_263000@2021-01-11 17:59:39.txt
+2021/01/11 17:59:39 Starting producer
+2021/01/11 17:59:39 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 4)
+2021/01/11 17:59:39 All messages flused from queue
+2021/01/11 17:59:39 Closing producer...
+2021/01/11 17:59:39 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 5)
+2021/01/11 17:59:39 Headers: [testHeader="headers value are binary"]
+2021/01/11 17:59:39 Create file from request on topic channel-kafka
+2021/01/11 17:59:39 File created:  storage/request/Request_from_channel-kafka@2021-01-11 17:59:39.txt
+2021/01/11 17:59:39 Converting ISO8583 to JSON
+2021/01/11 17:59:39 Convert success
+2021/01/11 17:59:39 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 17:59:39 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 17:59:39 Converting JSON to ISO8583
+2021/01/11 17:59:39 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 17:59:39 Field[17]: 0921 (Date, capture)
+2021/01/11 17:59:39 Field[18]: 7011 (Merchant type)
+2021/01/11 17:59:39 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 17:59:39 Field[3]: 263000 (Processing code)
+2021/01/11 17:59:39 Field[11]: 554461 (System trace audit number)
+2021/01/11 17:59:39 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 17:59:39 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 17:59:39 Field[49]: 360 (Currency code, transaction)
+2021/01/11 17:59:39 Field[50]: 702 (Currency code, settlement)
+2021/01/11 17:59:39 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 17:59:39 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 17:59:39 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 17:59:39 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 17:59:39 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 17:59:39 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 17:59:39 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 17:59:39 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 17:59:39 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 17:59:39 Field[22]: 011 (Point of service entry mode)
+2021/01/11 17:59:39 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 17:59:39 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 17:59:39 Convert Success
+2021/01/11 17:59:39 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 17:59:39 File created:  storage/response/Response_to_263000@2021-01-11 17:59:39.txt
+2021/01/11 17:59:39 Starting producer
+2021/01/11 17:59:39 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 5)
+2021/01/11 17:59:39 All messages flused from queue
+2021/01/11 17:59:39 Closing producer...
+2021/01/11 17:59:39 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 6)
+2021/01/11 17:59:39 Headers: [testHeader="headers value are binary"]
+2021/01/11 17:59:39 Create file from request on topic channel-kafka
+2021/01/11 17:59:39 File created:  storage/request/Request_from_channel-kafka@2021-01-11 17:59:39.txt
+2021/01/11 17:59:39 Converting ISO8583 to JSON
+2021/01/11 17:59:39 Convert success
+2021/01/11 17:59:39 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 17:59:40 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 17:59:40 Converting JSON to ISO8583
+2021/01/11 17:59:40 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 17:59:40 Field[11]: 554461 (System trace audit number)
+2021/01/11 17:59:40 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 17:59:40 Field[18]: 7011 (Merchant type)
+2021/01/11 17:59:40 Field[22]: 011 (Point of service entry mode)
+2021/01/11 17:59:40 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 17:59:40 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 17:59:40 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 17:59:40 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 17:59:40 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 17:59:40 Field[50]: 702 (Currency code, settlement)
+2021/01/11 17:59:40 Field[49]: 360 (Currency code, transaction)
+2021/01/11 17:59:40 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 17:59:40 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 17:59:40 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 17:59:40 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 17:59:40 Field[17]: 0921 (Date, capture)
+2021/01/11 17:59:40 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 17:59:40 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 17:59:40 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 17:59:40 Field[3]: 263000 (Processing code)
+2021/01/11 17:59:40 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 17:59:40 Convert Success
+2021/01/11 17:59:40 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 17:59:40 File created:  storage/response/Response_to_263000@2021-01-11 17:59:40.txt
+2021/01/11 17:59:40 Starting producer
+2021/01/11 17:59:40 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 6)
+2021/01/11 17:59:40 All messages flused from queue
+2021/01/11 17:59:40 Closing producer...
+2021/01/11 17:59:40 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 7)
+2021/01/11 17:59:40 Headers: [testHeader="headers value are binary"]
+2021/01/11 17:59:40 Create file from request on topic channel-kafka
+2021/01/11 17:59:40 File created:  storage/request/Request_from_channel-kafka@2021-01-11 17:59:40.txt
+2021/01/11 17:59:40 Converting ISO8583 to JSON
+2021/01/11 17:59:40 Convert success
+2021/01/11 17:59:40 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 17:59:40 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 17:59:40 Converting JSON to ISO8583
+2021/01/11 17:59:40 Field[18]: 7011 (Merchant type)
+2021/01/11 17:59:40 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 17:59:40 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 17:59:40 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 17:59:40 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 17:59:40 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 17:59:40 Field[17]: 0921 (Date, capture)
+2021/01/11 17:59:40 Field[11]: 554461 (System trace audit number)
+2021/01/11 17:59:40 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 17:59:40 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 17:59:40 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 17:59:40 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 17:59:40 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 17:59:40 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 17:59:40 Field[3]: 263000 (Processing code)
+2021/01/11 17:59:40 Field[22]: 011 (Point of service entry mode)
+2021/01/11 17:59:40 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 17:59:40 Field[49]: 360 (Currency code, transaction)
+2021/01/11 17:59:40 Field[50]: 702 (Currency code, settlement)
+2021/01/11 17:59:40 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 17:59:40 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 17:59:40 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 17:59:40 Convert Success
+2021/01/11 17:59:40 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 17:59:40 File created:  storage/response/Response_to_263000@2021-01-11 17:59:40.txt
+2021/01/11 17:59:40 Starting producer
+2021/01/11 17:59:40 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 7)
+2021/01/11 17:59:40 All messages flused from queue
+2021/01/11 17:59:40 Closing producer...
+2021/01/11 17:59:41 Got to the end of partition 0 on topic channel-kafka at offset 8
+2021/01/11 18:00:06 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 8)
+2021/01/11 18:00:06 Headers: [testHeader="headers value are binary"]
+2021/01/11 18:00:06 Create file from request on topic channel-kafka
+2021/01/11 18:00:06 File created:  storage/request/Request_from_channel-kafka@2021-01-11 18:00:06.txt
+2021/01/11 18:00:06 Converting ISO8583 to JSON
+2021/01/11 18:00:06 Convert success
+2021/01/11 18:00:06 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 18:00:07 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 18:00:07 Converting JSON to ISO8583
+2021/01/11 18:00:07 Field[17]: 0921 (Date, capture)
+2021/01/11 18:00:07 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 18:00:07 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 18:00:07 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 18:00:07 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 18:00:07 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 18:00:07 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 18:00:07 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 18:00:07 Field[18]: 7011 (Merchant type)
+2021/01/11 18:00:07 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 18:00:07 Field[49]: 360 (Currency code, transaction)
+2021/01/11 18:00:07 Field[50]: 702 (Currency code, settlement)
+2021/01/11 18:00:07 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 18:00:07 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 18:00:07 Field[11]: 554461 (System trace audit number)
+2021/01/11 18:00:07 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 18:00:07 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 18:00:07 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 18:00:07 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 18:00:07 Field[3]: 263000 (Processing code)
+2021/01/11 18:00:07 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 18:00:07 Field[22]: 011 (Point of service entry mode)
+2021/01/11 18:00:07 Convert Success
+2021/01/11 18:00:07 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 18:00:07 File created:  storage/response/Response_to_263000@2021-01-11 18:00:07.txt
+2021/01/11 18:00:07 Starting producer
+2021/01/11 18:00:07 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 8)
+2021/01/11 18:00:07 All messages flused from queue
+2021/01/11 18:00:07 Closing producer...
+2021/01/11 18:00:07 Got to the end of partition 0 on topic channel-kafka at offset 9
+2021/01/11 18:00:08 Got to the end of partition 0 on topic channel-kafka at offset 9
+2021/01/11 18:00:10 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 9)
+2021/01/11 18:00:10 Headers: [testHeader="headers value are binary"]
+2021/01/11 18:00:10 Create file from request on topic channel-kafka
+2021/01/11 18:00:10 File created:  storage/request/Request_from_channel-kafka@2021-01-11 18:00:10.txt
+2021/01/11 18:00:10 Converting ISO8583 to JSON
+2021/01/11 18:00:10 Convert success
+2021/01/11 18:00:10 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 18:00:10 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 18:00:10 Converting JSON to ISO8583
+2021/01/11 18:00:10 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 18:00:10 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 18:00:10 Field[11]: 554461 (System trace audit number)
+2021/01/11 18:00:10 Field[17]: 0921 (Date, capture)
+2021/01/11 18:00:10 Field[18]: 7011 (Merchant type)
+2021/01/11 18:00:10 Field[22]: 011 (Point of service entry mode)
+2021/01/11 18:00:10 Field[50]: 702 (Currency code, settlement)
+2021/01/11 18:00:10 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 18:00:10 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 18:00:10 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 18:00:10 Field[3]: 263000 (Processing code)
+2021/01/11 18:00:10 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 18:00:10 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 18:00:10 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 18:00:10 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 18:00:10 Field[49]: 360 (Currency code, transaction)
+2021/01/11 18:00:10 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 18:00:10 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 18:00:10 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 18:00:10 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 18:00:10 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 18:00:10 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 18:00:10 Convert Success
+2021/01/11 18:00:10 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 18:00:10 File created:  storage/response/Response_to_263000@2021-01-11 18:00:10.txt
+2021/01/11 18:00:10 Starting producer
+2021/01/11 18:00:10 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 9)
+2021/01/11 18:00:10 All messages flused from queue
+2021/01/11 18:00:10 Closing producer...
+2021/01/11 18:00:10 Got to the end of partition 0 on topic channel-kafka at offset 10
+2021/01/11 18:00:11 Got to the end of partition 0 on topic channel-kafka at offset 10
+2021/01/11 18:00:12 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 10)
+2021/01/11 18:00:12 Headers: [testHeader="headers value are binary"]
+2021/01/11 18:00:12 Create file from request on topic channel-kafka
+2021/01/11 18:00:12 File created:  storage/request/Request_from_channel-kafka@2021-01-11 18:00:12.txt
+2021/01/11 18:00:12 Converting ISO8583 to JSON
+2021/01/11 18:00:12 Convert success
+2021/01/11 18:00:12 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 18:00:12 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 18:00:12 Converting JSON to ISO8583
+2021/01/11 18:00:12 Field[3]: 263000 (Processing code)
+2021/01/11 18:00:12 Field[11]: 554461 (System trace audit number)
+2021/01/11 18:00:12 Field[18]: 7011 (Merchant type)
+2021/01/11 18:00:12 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 18:00:12 Field[49]: 360 (Currency code, transaction)
+2021/01/11 18:00:12 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 18:00:12 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 18:00:12 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 18:00:12 Field[17]: 0921 (Date, capture)
+2021/01/11 18:00:12 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 18:00:12 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 18:00:12 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 18:00:12 Field[22]: 011 (Point of service entry mode)
+2021/01/11 18:00:12 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 18:00:12 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 18:00:12 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 18:00:12 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 18:00:12 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 18:00:12 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 18:00:12 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 18:00:12 Field[50]: 702 (Currency code, settlement)
+2021/01/11 18:00:12 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 18:00:12 Convert Success
+2021/01/11 18:00:12 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 18:00:12 File created:  storage/response/Response_to_263000@2021-01-11 18:00:12.txt
+2021/01/11 18:00:12 Starting producer
+2021/01/11 18:00:12 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 10)
+2021/01/11 18:00:12 All messages flused from queue
+2021/01/11 18:00:12 Closing producer...
+2021/01/11 18:00:12 Got to the end of partition 0 on topic channel-kafka at offset 11
+2021/01/11 18:00:14 Got to the end of partition 0 on topic channel-kafka at offset 11
+2021/01/11 18:00:15 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 11)
+2021/01/11 18:00:15 Headers: [testHeader="headers value are binary"]
+2021/01/11 18:00:15 Create file from request on topic channel-kafka
+2021/01/11 18:00:15 File created:  storage/request/Request_from_channel-kafka@2021-01-11 18:00:15.txt
+2021/01/11 18:00:15 Converting ISO8583 to JSON
+2021/01/11 18:00:15 Convert success
+2021/01/11 18:00:15 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 18:00:15 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 18:00:15 Converting JSON to ISO8583
+2021/01/11 18:00:15 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 18:00:15 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 18:00:15 Field[17]: 0921 (Date, capture)
+2021/01/11 18:00:15 Field[50]: 702 (Currency code, settlement)
+2021/01/11 18:00:15 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 18:00:15 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 18:00:15 Field[3]: 263000 (Processing code)
+2021/01/11 18:00:15 Field[22]: 011 (Point of service entry mode)
+2021/01/11 18:00:15 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 18:00:15 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 18:00:15 Field[11]: 554461 (System trace audit number)
+2021/01/11 18:00:15 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 18:00:15 Field[18]: 7011 (Merchant type)
+2021/01/11 18:00:15 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 18:00:15 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 18:00:15 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 18:00:15 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 18:00:15 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 18:00:15 Field[49]: 360 (Currency code, transaction)
+2021/01/11 18:00:15 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 18:00:15 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 18:00:15 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 18:00:15 Convert Success
+2021/01/11 18:00:15 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 18:00:15 File created:  storage/response/Response_to_263000@2021-01-11 18:00:15.txt
+2021/01/11 18:00:15 Starting producer
+2021/01/11 18:00:15 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 11)
+2021/01/11 18:00:15 All messages flused from queue
+2021/01/11 18:00:15 Closing producer...
+2021/01/11 18:00:15 Got to the end of partition 0 on topic channel-kafka at offset 12
+2021/01/11 18:00:17 Got to the end of partition 0 on topic channel-kafka at offset 12
+2021/01/11 18:00:20 Got to the end of partition 0 on topic channel-kafka at offset 12
+2021/01/11 18:01:54 Starting producer
+2021/01/11 18:01:54 Starting consumer
+2021/01/11 18:01:54 Got to the end of partition 0 on topic channel-kafka at offset 12
+2021/01/11 18:01:55 Starting producer
+2021/01/11 18:01:55 Starting consumer
+2021/01/11 18:01:57 Got to the end of partition 0 on topic channel-kafka at offset 12
+2021/01/11 18:02:03 Starting producer
+2021/01/11 18:02:03 Starting consumer
+2021/01/11 18:02:10 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 12)
+2021/01/11 18:02:10 Headers: [testHeader="headers value are binary"]
+2021/01/11 18:02:10 Create file from request on topic channel-kafka
+2021/01/11 18:02:10 File created:  storage/request/Request_from_channel-kafka@2021-01-11 18:02:10.txt
+2021/01/11 18:02:10 Converting ISO8583 to JSON
+2021/01/11 18:02:10 Convert success
+2021/01/11 18:02:10 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 18:02:12 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 18:02:12 Converting JSON to ISO8583
+2021/01/11 18:02:12 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 18:02:12 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 18:02:12 Field[17]: 0921 (Date, capture)
+2021/01/11 18:02:12 Field[18]: 7011 (Merchant type)
+2021/01/11 18:02:12 Field[49]: 360 (Currency code, transaction)
+2021/01/11 18:02:12 Field[50]: 702 (Currency code, settlement)
+2021/01/11 18:02:12 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 18:02:12 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 18:02:12 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 18:02:12 Field[22]: 011 (Point of service entry mode)
+2021/01/11 18:02:12 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 18:02:12 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 18:02:12 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 18:02:12 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 18:02:12 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 18:02:12 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 18:02:12 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 18:02:12 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 18:02:12 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 18:02:12 Field[3]: 263000 (Processing code)
+2021/01/11 18:02:12 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 18:02:12 Field[11]: 554461 (System trace audit number)
+2021/01/11 18:02:12 Convert Success
+2021/01/11 18:02:12 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 18:02:12 File created:  storage/response/Response_to_263000@2021-01-11 18:02:12.txt
+2021/01/11 18:02:12 Starting producer
+2021/01/11 18:02:12 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 12)
+2021/01/11 18:02:12 All messages flused from queue
+2021/01/11 18:02:12 Closing producer...
+2021/01/11 18:02:12 Got to the end of partition 0 on topic channel-kafka at offset 13
+2021/01/11 18:02:14 Got to the end of partition 0 on topic channel-kafka at offset 13
+2021/01/11 18:02:22 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 13)
+2021/01/11 18:02:22 Headers: [testHeader="headers value are binary"]
+2021/01/11 18:02:22 Create file from request on topic channel-kafka
+2021/01/11 18:02:22 File created:  storage/request/Request_from_channel-kafka@2021-01-11 18:02:22.txt
+2021/01/11 18:02:22 Converting ISO8583 to JSON
+2021/01/11 18:02:22 Convert success
+2021/01/11 18:02:22 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 18:02:22 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 18:02:22 Converting JSON to ISO8583
+2021/01/11 18:02:22 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 18:02:22 Field[3]: 263000 (Processing code)
+2021/01/11 18:02:22 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 18:02:22 Field[17]: 0921 (Date, capture)
+2021/01/11 18:02:22 Field[49]: 360 (Currency code, transaction)
+2021/01/11 18:02:22 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 18:02:22 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 18:02:22 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 18:02:22 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 18:02:22 Field[50]: 702 (Currency code, settlement)
+2021/01/11 18:02:22 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 18:02:22 Field[11]: 554461 (System trace audit number)
+2021/01/11 18:02:22 Field[18]: 7011 (Merchant type)
+2021/01/11 18:02:22 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 18:02:22 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 18:02:22 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 18:02:22 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 18:02:22 Field[22]: 011 (Point of service entry mode)
+2021/01/11 18:02:22 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 18:02:22 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 18:02:22 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 18:02:22 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 18:02:22 Convert Success
+2021/01/11 18:02:22 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 18:02:22 File created:  storage/response/Response_to_263000@2021-01-11 18:02:22.txt
+2021/01/11 18:02:22 Starting producer
+2021/01/11 18:02:22 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 13)
+2021/01/11 18:02:22 All messages flused from queue
+2021/01/11 18:02:22 Closing producer...
+2021/01/11 18:02:23 Got to the end of partition 0 on topic channel-kafka at offset 14
+2021/01/11 18:02:26 Got to the end of partition 0 on topic channel-kafka at offset 14
+2021/01/11 18:02:47 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 14)
+2021/01/11 18:02:47 Headers: [testHeader="headers value are binary"]
+2021/01/11 18:02:47 Create file from request on topic channel-kafka
+2021/01/11 18:02:47 File created:  storage/request/Request_from_channel-kafka@2021-01-11 18:02:47.txt
+2021/01/11 18:02:47 Converting ISO8583 to JSON
+2021/01/11 18:02:47 Convert success
+2021/01/11 18:02:47 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 18:02:47 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 18:02:47 Converting JSON to ISO8583
+2021/01/11 18:02:47 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 18:02:47 Field[3]: 263000 (Processing code)
+2021/01/11 18:02:47 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 18:02:47 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 18:02:47 Field[11]: 554461 (System trace audit number)
+2021/01/11 18:02:47 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 18:02:47 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 18:02:47 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 18:02:47 Field[22]: 011 (Point of service entry mode)
+2021/01/11 18:02:47 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 18:02:47 Field[49]: 360 (Currency code, transaction)
+2021/01/11 18:02:47 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 18:02:47 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 18:02:47 Field[17]: 0921 (Date, capture)
+2021/01/11 18:02:47 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 18:02:47 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 18:02:47 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 18:02:47 Field[50]: 702 (Currency code, settlement)
+2021/01/11 18:02:47 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 18:02:47 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 18:02:47 Field[18]: 7011 (Merchant type)
+2021/01/11 18:02:47 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 18:02:47 Convert Success
+2021/01/11 18:02:47 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 18:02:47 File created:  storage/response/Response_to_263000@2021-01-11 18:02:47.txt
+2021/01/11 18:02:47 Starting producer
+2021/01/11 18:02:48 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 14)
+2021/01/11 18:02:48 All messages flused from queue
+2021/01/11 18:02:48 Closing producer...
+2021/01/11 18:02:48 Got to the end of partition 0 on topic channel-kafka at offset 15
+2021/01/11 18:02:50 Got to the end of partition 0 on topic channel-kafka at offset 15
+2021/01/11 18:02:53 Got to the end of partition 0 on topic channel-kafka at offset 15
+2021/01/11 18:03:16 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 15)
+2021/01/11 18:03:16 Headers: [testHeader="headers value are binary"]
+2021/01/11 18:03:16 Create file from request on topic channel-kafka
+2021/01/11 18:03:16 File created:  storage/request/Request_from_channel-kafka@2021-01-11 18:03:16.txt
+2021/01/11 18:03:16 Converting ISO8583 to JSON
+2021/01/11 18:03:16 Convert success
+2021/01/11 18:03:16 Request to https://tiruan.herokuapp.com/biller
+2021/01/11 18:03:17 Response from https://tiruan.herokuapp.com/biller
+2021/01/11 18:03:17 Converting JSON to ISO8583
+2021/01/11 18:03:17 Field[5]: 000001350000 (Amount, settlement)
+2021/01/11 18:03:17 Field[11]: 554461 (System trace audit number)
+2021/01/11 18:03:17 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/11 18:03:17 Field[18]: 7011 (Merchant type)
+2021/01/11 18:03:17 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/11 18:03:17 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/11 18:03:17 Field[50]: 702 (Currency code, settlement)
+2021/01/11 18:03:17 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/11 18:03:17 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/11 18:03:17 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/11 18:03:17 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/11 18:03:17 Field[17]: 0921 (Date, capture)
+2021/01/11 18:03:17 Field[22]: 011 (Point of service entry mode)
+2021/01/11 18:03:17 Field[3]: 263000 (Processing code)
+2021/01/11 18:03:17 Field[4]: 000011550000 (Amount, transaction)
+2021/01/11 18:03:17 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/11 18:03:17 Field[7]: 0921072381 (Transmission date & time)
+2021/01/11 18:03:17 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/11 18:03:17 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/11 18:03:17 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/11 18:03:17 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/11 18:03:17 Field[49]: 360 (Currency code, transaction)
+2021/01/11 18:03:17 Convert Success
+2021/01/11 18:03:17 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/11 18:03:17 File created:  storage/response/Response_to_263000@2021-01-11 18:03:17.txt
+2021/01/11 18:03:17 Starting producer
+2021/01/11 18:03:17 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 15)
+2021/01/11 18:03:17 All messages flused from queue
+2021/01/11 18:03:17 Closing producer...
+2021/01/11 18:03:17 Got to the end of partition 0 on topic channel-kafka at offset 16
+2021/01/11 18:03:20 Got to the end of partition 0 on topic channel-kafka at offset 16
+2021/01/11 18:03:23 Got to the end of partition 0 on topic channel-kafka at offset 16
+2021/01/12 14:05:06 Starting producer
+2021/01/12 14:05:06 Starting consumer
+2021/01/12 14:05:08 ☠️ Uh oh, caught an error:
+	Subscribed topic not available: channel-kafka: Broker: Unknown topic or partition
+2021/01/12 14:05:47 Got to the end of partition 0 on topic channel-kafka at offset 1
+2021/01/12 14:06:10 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 1)
+2021/01/12 14:06:10 Headers: [testHeader="headers value are binary"]
+2021/01/12 14:06:10 Create file from request on topic channel-kafka
+2021/01/12 14:06:10 File created:  storage/request/Request_from_channel-kafka@2021-01-12 14:06:10.txt
+2021/01/12 14:06:10 Converting ISO8583 to JSON
+2021/01/12 14:06:10 Convert success
+2021/01/12 14:06:10 Request to https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:21 Response from https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:21 Converting JSON to ISO8583
+2021/01/12 14:06:21 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/12 14:06:21 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/12 14:06:21 Field[7]: 0921072381 (Transmission date & time)
+2021/01/12 14:06:21 Field[11]: 554461 (System trace audit number)
+2021/01/12 14:06:21 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/12 14:06:21 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/12 14:06:21 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/12 14:06:21 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/12 14:06:21 Field[50]: 702 (Currency code, settlement)
+2021/01/12 14:06:21 Field[3]: 263000 (Processing code)
+2021/01/12 14:06:21 Field[4]: 000011550000 (Amount, transaction)
+2021/01/12 14:06:21 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/12 14:06:21 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/12 14:06:21 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/12 14:06:21 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/12 14:06:21 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/12 14:06:21 Field[5]: 000001350000 (Amount, settlement)
+2021/01/12 14:06:21 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/12 14:06:21 Field[17]: 0921 (Date, capture)
+2021/01/12 14:06:21 Field[18]: 7011 (Merchant type)
+2021/01/12 14:06:21 Field[22]: 011 (Point of service entry mode)
+2021/01/12 14:06:21 Field[49]: 360 (Currency code, transaction)
+2021/01/12 14:06:21 Convert Success
+2021/01/12 14:06:21 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/12 14:06:21 File created:  storage/response/Response_to_263000@2021-01-12 14:06:21.txt
+2021/01/12 14:06:21 Starting producer
+2021/01/12 14:06:22 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 0)
+2021/01/12 14:06:22 All messages flused from queue
+2021/01/12 14:06:22 Closing producer...
+2021/01/12 14:06:22 Got to the end of partition 0 on topic channel-kafka at offset 2
+2021/01/12 14:06:22 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 2)
+2021/01/12 14:06:22 Headers: [testHeader="headers value are binary"]
+2021/01/12 14:06:22 Create file from request on topic channel-kafka
+2021/01/12 14:06:22 File created:  storage/request/Request_from_channel-kafka@2021-01-12 14:06:22.txt
+2021/01/12 14:06:22 Converting ISO8583 to JSON
+2021/01/12 14:06:22 Convert success
+2021/01/12 14:06:22 Request to https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:23 Response from https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:23 Converting JSON to ISO8583
+2021/01/12 14:06:23 Field[17]: 0921 (Date, capture)
+2021/01/12 14:06:23 Field[22]: 011 (Point of service entry mode)
+2021/01/12 14:06:23 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/12 14:06:23 Field[50]: 702 (Currency code, settlement)
+2021/01/12 14:06:23 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/12 14:06:23 Field[5]: 000001350000 (Amount, settlement)
+2021/01/12 14:06:23 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/12 14:06:23 Field[11]: 554461 (System trace audit number)
+2021/01/12 14:06:23 Field[7]: 0921072381 (Transmission date & time)
+2021/01/12 14:06:23 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/12 14:06:23 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/12 14:06:23 Field[49]: 360 (Currency code, transaction)
+2021/01/12 14:06:23 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/12 14:06:23 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/12 14:06:23 Field[3]: 263000 (Processing code)
+2021/01/12 14:06:23 Field[4]: 000011550000 (Amount, transaction)
+2021/01/12 14:06:23 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/12 14:06:23 Field[18]: 7011 (Merchant type)
+2021/01/12 14:06:23 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/12 14:06:23 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/12 14:06:23 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/12 14:06:23 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/12 14:06:23 Convert Success
+2021/01/12 14:06:23 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/12 14:06:23 File created:  storage/response/Response_to_263000@2021-01-12 14:06:23.txt
+2021/01/12 14:06:23 Starting producer
+2021/01/12 14:06:23 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 1)
+2021/01/12 14:06:23 All messages flused from queue
+2021/01/12 14:06:23 Closing producer...
+2021/01/12 14:06:23 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 3)
+2021/01/12 14:06:23 Headers: [testHeader="headers value are binary"]
+2021/01/12 14:06:23 Create file from request on topic channel-kafka
+2021/01/12 14:06:23 File created:  storage/request/Request_from_channel-kafka@2021-01-12 14:06:23.txt
+2021/01/12 14:06:23 Converting ISO8583 to JSON
+2021/01/12 14:06:23 Convert success
+2021/01/12 14:06:23 Request to https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:23 Response from https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:23 Converting JSON to ISO8583
+2021/01/12 14:06:23 Field[3]: 263000 (Processing code)
+2021/01/12 14:06:23 Field[11]: 554461 (System trace audit number)
+2021/01/12 14:06:23 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/12 14:06:23 Field[17]: 0921 (Date, capture)
+2021/01/12 14:06:23 Field[49]: 360 (Currency code, transaction)
+2021/01/12 14:06:23 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/12 14:06:23 Field[5]: 000001350000 (Amount, settlement)
+2021/01/12 14:06:23 Field[18]: 7011 (Merchant type)
+2021/01/12 14:06:23 Field[22]: 011 (Point of service entry mode)
+2021/01/12 14:06:23 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/12 14:06:23 Field[50]: 702 (Currency code, settlement)
+2021/01/12 14:06:23 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/12 14:06:23 Field[4]: 000011550000 (Amount, transaction)
+2021/01/12 14:06:23 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/12 14:06:23 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/12 14:06:23 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/12 14:06:23 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/12 14:06:23 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/12 14:06:23 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/12 14:06:23 Field[7]: 0921072381 (Transmission date & time)
+2021/01/12 14:06:23 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/12 14:06:23 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/12 14:06:23 Convert Success
+2021/01/12 14:06:23 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/12 14:06:23 File created:  storage/response/Response_to_263000@2021-01-12 14:06:23.txt
+2021/01/12 14:06:23 Starting producer
+2021/01/12 14:06:23 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 2)
+2021/01/12 14:06:24 All messages flused from queue
+2021/01/12 14:06:24 Closing producer...
+2021/01/12 14:06:24 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 4)
+2021/01/12 14:06:24 Headers: [testHeader="headers value are binary"]
+2021/01/12 14:06:24 Create file from request on topic channel-kafka
+2021/01/12 14:06:24 File created:  storage/request/Request_from_channel-kafka@2021-01-12 14:06:24.txt
+2021/01/12 14:06:24 Converting ISO8583 to JSON
+2021/01/12 14:06:24 Convert success
+2021/01/12 14:06:24 Request to https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:24 Response from https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:24 Converting JSON to ISO8583
+2021/01/12 14:06:24 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/12 14:06:24 Field[49]: 360 (Currency code, transaction)
+2021/01/12 14:06:24 Field[7]: 0921072381 (Transmission date & time)
+2021/01/12 14:06:24 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/12 14:06:24 Field[11]: 554461 (System trace audit number)
+2021/01/12 14:06:24 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/12 14:06:24 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/12 14:06:24 Field[17]: 0921 (Date, capture)
+2021/01/12 14:06:24 Field[18]: 7011 (Merchant type)
+2021/01/12 14:06:24 Field[50]: 702 (Currency code, settlement)
+2021/01/12 14:06:24 Field[3]: 263000 (Processing code)
+2021/01/12 14:06:24 Field[4]: 000011550000 (Amount, transaction)
+2021/01/12 14:06:24 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/12 14:06:24 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/12 14:06:24 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/12 14:06:24 Field[22]: 011 (Point of service entry mode)
+2021/01/12 14:06:24 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/12 14:06:24 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/12 14:06:24 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/12 14:06:24 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/12 14:06:24 Field[5]: 000001350000 (Amount, settlement)
+2021/01/12 14:06:24 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/12 14:06:24 Convert Success
+2021/01/12 14:06:24 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/12 14:06:24 File created:  storage/response/Response_to_263000@2021-01-12 14:06:24.txt
+2021/01/12 14:06:24 Starting producer
+2021/01/12 14:06:24 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 3)
+2021/01/12 14:06:24 All messages flused from queue
+2021/01/12 14:06:24 Closing producer...
+2021/01/12 14:06:24 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 5)
+2021/01/12 14:06:24 Headers: [testHeader="headers value are binary"]
+2021/01/12 14:06:24 Create file from request on topic channel-kafka
+2021/01/12 14:06:24 File created:  storage/request/Request_from_channel-kafka@2021-01-12 14:06:24.txt
+2021/01/12 14:06:24 Converting ISO8583 to JSON
+2021/01/12 14:06:24 Convert success
+2021/01/12 14:06:24 Request to https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:34 Starting producer
+2021/01/12 14:06:34 Starting consumer
+2021/01/12 14:06:34 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 3)
+2021/01/12 14:06:34 Headers: [testHeader="headers value are binary"]
+2021/01/12 14:06:34 Create file from request on topic channel-kafka
+2021/01/12 14:06:34 File created:  storage/request/Request_from_channel-kafka@2021-01-12 14:06:34.txt
+2021/01/12 14:06:34 Converting ISO8583 to JSON
+2021/01/12 14:06:34 Convert success
+2021/01/12 14:06:34 Request to https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:36 Response from https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:36 Converting JSON to ISO8583
+2021/01/12 14:06:36 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/12 14:06:36 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/12 14:06:36 Field[3]: 263000 (Processing code)
+2021/01/12 14:06:36 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/12 14:06:36 Field[50]: 702 (Currency code, settlement)
+2021/01/12 14:06:36 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/12 14:06:36 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/12 14:06:36 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/12 14:06:36 Field[4]: 000011550000 (Amount, transaction)
+2021/01/12 14:06:36 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/12 14:06:36 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/12 14:06:36 Field[18]: 7011 (Merchant type)
+2021/01/12 14:06:36 Field[22]: 011 (Point of service entry mode)
+2021/01/12 14:06:36 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/12 14:06:36 Field[49]: 360 (Currency code, transaction)
+2021/01/12 14:06:36 Field[5]: 000001350000 (Amount, settlement)
+2021/01/12 14:06:36 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/12 14:06:36 Field[7]: 0921072381 (Transmission date & time)
+2021/01/12 14:06:36 Field[11]: 554461 (System trace audit number)
+2021/01/12 14:06:36 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/12 14:06:36 Field[17]: 0921 (Date, capture)
+2021/01/12 14:06:36 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/12 14:06:36 Convert Success
+2021/01/12 14:06:36 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/12 14:06:36 File created:  storage/response/Response_to_263000@2021-01-12 14:06:36.txt
+2021/01/12 14:06:36 Starting producer
+2021/01/12 14:06:36 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 4)
+2021/01/12 14:06:36 All messages flused from queue
+2021/01/12 14:06:36 Closing producer...
+2021/01/12 14:06:36 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 4)
+2021/01/12 14:06:36 Headers: [testHeader="headers value are binary"]
+2021/01/12 14:06:36 Create file from request on topic channel-kafka
+2021/01/12 14:06:36 File created:  storage/request/Request_from_channel-kafka@2021-01-12 14:06:36.txt
+2021/01/12 14:06:36 Converting ISO8583 to JSON
+2021/01/12 14:06:36 Convert success
+2021/01/12 14:06:36 Request to https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:36 Response from https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:36 Converting JSON to ISO8583
+2021/01/12 14:06:36 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/12 14:06:36 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/12 14:06:36 Field[17]: 0921 (Date, capture)
+2021/01/12 14:06:36 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/12 14:06:36 Field[49]: 360 (Currency code, transaction)
+2021/01/12 14:06:36 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/12 14:06:36 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/12 14:06:36 Field[22]: 011 (Point of service entry mode)
+2021/01/12 14:06:36 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/12 14:06:36 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/12 14:06:36 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/12 14:06:36 Field[50]: 702 (Currency code, settlement)
+2021/01/12 14:06:36 Field[3]: 263000 (Processing code)
+2021/01/12 14:06:36 Field[4]: 000011550000 (Amount, transaction)
+2021/01/12 14:06:36 Field[5]: 000001350000 (Amount, settlement)
+2021/01/12 14:06:36 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/12 14:06:36 Field[7]: 0921072381 (Transmission date & time)
+2021/01/12 14:06:36 Field[11]: 554461 (System trace audit number)
+2021/01/12 14:06:36 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/12 14:06:36 Field[18]: 7011 (Merchant type)
+2021/01/12 14:06:36 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/12 14:06:36 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/12 14:06:36 Convert Success
+2021/01/12 14:06:36 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/12 14:06:36 File created:  storage/response/Response_to_263000@2021-01-12 14:06:36.txt
+2021/01/12 14:06:36 Starting producer
+2021/01/12 14:06:36 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 5)
+2021/01/12 14:06:36 All messages flused from queue
+2021/01/12 14:06:36 Closing producer...
+2021/01/12 14:06:36 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 5)
+2021/01/12 14:06:36 Headers: [testHeader="headers value are binary"]
+2021/01/12 14:06:36 Create file from request on topic channel-kafka
+2021/01/12 14:06:36 File created:  storage/request/Request_from_channel-kafka@2021-01-12 14:06:36.txt
+2021/01/12 14:06:36 Converting ISO8583 to JSON
+2021/01/12 14:06:36 Convert success
+2021/01/12 14:06:36 Request to https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:37 Response from https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:37 Converting JSON to ISO8583
+2021/01/12 14:06:37 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/12 14:06:37 Field[5]: 000001350000 (Amount, settlement)
+2021/01/12 14:06:37 Field[18]: 7011 (Merchant type)
+2021/01/12 14:06:37 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/12 14:06:37 Field[50]: 702 (Currency code, settlement)
+2021/01/12 14:06:37 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/12 14:06:37 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/12 14:06:37 Field[17]: 0921 (Date, capture)
+2021/01/12 14:06:37 Field[49]: 360 (Currency code, transaction)
+2021/01/12 14:06:37 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/12 14:06:37 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/12 14:06:37 Field[4]: 000011550000 (Amount, transaction)
+2021/01/12 14:06:37 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/12 14:06:37 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/12 14:06:37 Field[22]: 011 (Point of service entry mode)
+2021/01/12 14:06:37 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/12 14:06:37 Field[3]: 263000 (Processing code)
+2021/01/12 14:06:37 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/12 14:06:37 Field[7]: 0921072381 (Transmission date & time)
+2021/01/12 14:06:37 Field[11]: 554461 (System trace audit number)
+2021/01/12 14:06:37 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/12 14:06:37 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/12 14:06:37 Convert Success
+2021/01/12 14:06:37 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/12 14:06:37 File created:  storage/response/Response_to_263000@2021-01-12 14:06:37.txt
+2021/01/12 14:06:37 Starting producer
+2021/01/12 14:06:37 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 6)
+2021/01/12 14:06:37 All messages flused from queue
+2021/01/12 14:06:37 Closing producer...
+2021/01/12 14:06:37 Got to the end of partition 0 on topic channel-kafka at offset 6
+2021/01/12 14:06:38 Message '028902007ef8c40008a1e08019936001490000000888326301000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	received from topic 'channel-kafka' (partition 0 at offset 6)
+2021/01/12 14:06:38 Headers: [testHeader="headers value are binary"]
+2021/01/12 14:06:38 Create file from request on topic channel-kafka
+2021/01/12 14:06:38 File created:  storage/request/Request_from_channel-kafka@2021-01-12 14:06:38.txt
+2021/01/12 14:06:38 Converting ISO8583 to JSON
+2021/01/12 14:06:38 Convert success
+2021/01/12 14:06:38 Request to https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:39 Response from https://tiruan.herokuapp.com/biller
+2021/01/12 14:06:39 Converting JSON to ISO8583
+2021/01/12 14:06:39 Field[4]: 000011550000 (Amount, transaction)
+2021/01/12 14:06:39 Field[10]: 00000111 (Conversion rate, cardholder billing)
+2021/01/12 14:06:39 Field[12]: 082022 (Time, local transaction (hhmmss))
+2021/01/12 14:06:39 Field[48]: PI04Q001CD30SUSAEN                         MC03UMI (Additional data - private)
+2021/01/12 14:06:39 Field[49]: 360 (Currency code, transaction)
+2021/01/12 14:06:39 Field[50]: 702 (Currency code, settlement)
+2021/01/12 14:06:39 Field[57]: 61051511562070703C01 (Reserved national)
+2021/01/12 14:06:39 Field[2]: 9360014900000008883 (Primary account number (PAN))
+2021/01/12 14:06:39 Field[6]: 000001350000 (Amount, cardholder billing)
+2021/01/12 14:06:39 Field[11]: 554461 (System trace audit number)
+2021/01/12 14:06:39 Field[41]: C01              (Card acceptor terminal identification)
+2021/01/12 14:06:39 Field[51]: 702 (Currency code, cardholder billing)
+2021/01/12 14:06:39 Field[5]: 000001350000 (Amount, settlement)
+2021/01/12 14:06:39 Field[9]: 00000111 (Conversion rate, settlement)
+2021/01/12 14:06:39 Field[13]: 0921 (Date, local transaction (MMDD))
+2021/01/12 14:06:39 Field[22]: 011 (Point of service entry mode)
+2021/01/12 14:06:39 Field[37]: 678615554461 (Retrieval reference number)
+2021/01/12 14:06:39 Field[43]: IUT MLPT      RINTIS     TANGERANG    ID (Card acceptor name/location)
+2021/01/12 14:06:39 Field[3]: 263000 (Processing code)
+2021/01/12 14:06:39 Field[7]: 0921072381 (Transmission date & time)
+2021/01/12 14:06:39 Field[17]: 0921 (Date, capture)
+2021/01/12 14:06:39 Field[18]: 7011 (Merchant type)
+2021/01/12 14:06:39 Convert Success
+2021/01/12 14:06:39 
+
+Response: 
+	Header: 289
+	MTI: 0210
+	Hex: 7ef8c40008a1e080
+	Iso Message: 02107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+	Full Message: 028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01
+
+2021/01/12 14:06:39 File created:  storage/response/Response_to_263000@2021-01-12 14:06:39.txt
+2021/01/12 14:06:39 Starting producer
+2021/01/12 14:06:39 Message '028902107ef8c40008a1e08019936001490000000888326300000001155000000000135000000000135000009210723810000011100000111554461082022092109217011011678615554461C01             IUT MLPT      RINTIS     TANGERANG    ID050PI04Q001CD30SUSAEN                         MC03UMI36070270202061051511562070703C01' 
+	delivered to topic 'kafka-biller' (partition 0 at offset 7)
+2021/01/12 14:06:39 All messages flused from queue
+2021/01/12 14:06:39 Closing producer...
+2021/01/12 14:06:39 Got to the end of partition 0 on topic channel-kafka at offset 7
+2021/01/12 14:06:41 Got to the end of partition 0 on topic channel-kafka at offset 7
+2021/01/12 14:06:44 Got to the end of partition 0 on topic channel-kafka at offset 7
